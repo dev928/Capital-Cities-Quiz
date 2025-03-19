@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Cities Quiz</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .quiz-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .option {
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+
+        .results {
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>Capital Cities Quiz</h1>
+
+        <form id="quiz-form">
+            <div class="question">
+                <p>1. What is the capital of Australia?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q1" value="a"> a) Sydney</label>
+                    <label class="option"><input type="radio" name="q1" value="b"> b) Melbourne</label>
+                    <label class="option"><input type="radio" name="q1" value="c"> c) Canberra</label>
+                    <label class="option"><input type="radio" name="q1" value="d"> d) Perth</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. Which of the following is the capital of Brazil?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q2" value="a"> a) Rio de Janeiro</label>
+                    <label class="option"><input type="radio" name="q2" value="b"> b) São Paulo</label>
+                    <label class="option"><input type="radio" name="q2" value="c"> c) Brasília</label>
+                    <label class="option"><input type="radio" name="q2" value="d"> d) Salvador</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. What is the capital city of Canada?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q3" value="a"> a) Toronto</label>
+                    <label class="option"><input type="radio" name="q3" value="b"> b) Montreal</label>
+                    <label class="option"><input type="radio" name="q3" value="c"> c) Vancouver</label>
+                    <label class="option"><input type="radio" name="q3" value="d"> d) Ottawa</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. Which city serves as the capital of Japan?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q4" value="a"> a) Kyoto</label>
+                    <label class="option"><input type="radio" name="q4" value="b"> b) Osaka</label>
+                    <label class="option"><input type="radio" name="q4" value="c"> c) Tokyo</label>
+                    <label class="option"><input type="radio" name="q4" value="d"> d) Hiroshima</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. What is the capital of Egypt?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q5" value="a"> a) Alexandria</label>
+                    <label class="option"><input type="radio" name="q5" value="b"> b) Giza</label>
+                    <label class="option"><input type="radio" name="q5" value="c"> c) Cairo</label>
+                    <label class="option"><input type="radio" name="q5" value="d"> d) Luxor</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. Which of these cities is the capital of South Africa?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q6" value="a"> a) Johannesburg</label>
+                    <label class="option"><input type="radio" name="q6" value="b"> b) Cape Town</label>
+                    <label class="option"><input type="radio" name="q6" value="c"> c) Durban</label>
+                    <label class="option"><input type="radio" name="q6" value="d"> d) There is no single capital; South Africa has three.</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. The capital of Argentina is:</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q7" value="a"> a) Buenos Aires</label>
+                    <label class="option"><input type="radio" name="q7" value="b"> b) Rosario</label>
+                    <label class="option"><input type="radio" name="q7" value="c"> c) Córdoba</label>
+                    <label class="option"><input type="radio" name="q7" value="d"> d) Mendoza</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. What is the capital of Vietnam?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q8" value="a"> a) Ho Chi Minh City</label>
+                    <label class="option"><input type="radio" name="q8" value="b"> b) Da Nang</label>
+                    <label class="option"><input type="radio" name="q8" value="c"> c) Hanoi</label>
+                    <label class="option"><input type="radio" name="q8" value="d"> d) Hue</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. Which of the following is the capital city of Nigeria?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q9" value="a"> a) Lagos</label>
+                    <label class="option"><input type="radio" name="q9" value="b"> b) Kano</label>
+                    <label class="option"><input type="radio" name="q9" value="c"> c) Ibadan</label>
+                    <label class="option"><input type="radio" name="q9" value="d"> d) Abuja</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. What is the capital of Switzerland?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q10" value="a"> a) Zurich</label>
+                    <label class="option"><input type="radio" name="q10" value="b"> b) Geneva</label>
+                    <label class="option"><input type="radio" name="q10" value="c"> c) Bern</label>
+                    <label class="option"><input type="radio" name="q10" value="d"> d) Lausanne</label>
+                </div>
+            </div>
+
+              <div class="question">
+                <p>11. Which city is the capital of Turkey?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q11" value="a"> a) Istanbul</label>
+                    <label class="option"><input type="radio" name="q11" value="b"> b) Ankara</label>
+                    <label class="option"><input type="radio" name="q11" value="c"> c) Izmir</label>
+                    <label class="option"><input type="radio" name="q11" value="d"> d) Bursa</label>
+                </div>
+            </div>
+              <div class="question">
+                <p>12. What is the capital city of Morocco?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q12" value="a"> a) Casablanca</label>
+                    <label class="option"><input type="radio" name="q12" value="b"> b) Marrakech</label>
+                    <label class="option"><input type="radio" name="q12" value="c"> c) Rabat</label>
+                    <label class="option"><input type="radio" name="q12" value="d"> d) Fez</label>
+                </div>
+            </div>
+              <div class="question">
+                <p>13. The capital of Ukraine is:</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q13" value="a"> a) Lviv</label>
+                    <label class="option"><input type="radio" name="q13" value="b"> b) Kharkiv</label>
+                    <label class="option"><input type="radio" name="q13" value="c"> c) Kyiv</label>
+                    <label class="option"><input type="radio" name="q13" value="d"> d) Odesa</label>
+                </div>
+            </div>
+              <div class="question">
+                <p>14. Which of the following is the capital city of New Zealand?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q14" value="a"> a) Auckland</label>
+                    <label class="option"><input type="radio" name="q14" value="b"> b) Christchurch</label>
+                    <label class="option"><input type="radio" name="q14" value="c"> c) Wellington</label>
+                    <label class="option"><input type="radio" name="q14" value="d"> d) Queenstown</label>
+                </div>
+            </div>
+              <div class="question">
+                <p>15. What is the capital of Saudi Arabia?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q15" value="a"> a) Jeddah</label>
+                    <label class="option"><input type="radio" name="q15" value="b"> b) Mecca</label>
+                    <label class="option"><input type="radio" name="q15" value="c"> c) Medina</label>
+                    <label class="option"><input type="radio" name="q15" value="d"> d) Riyadh</label>
+                </div>
+            </div>
+              <div class="question">
+                <p>16. Which city serves as the capital of Sweden?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q16" value="a"> a) Gothenburg</label>
+                    <label class="option"><input type="radio" name="q16" value="b"> b) Malmö</label>
+                    <label class="option"><input type="radio" name="q16" value="c"> c) Uppsala</label>
+                    <label class="option"><input type="radio" name="q16" value="d"> d) Stockholm</label>
+                </div>
+            </div>
+              <div class="question">
+                <p>17. What is the capital city of Kenya?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q17" value="a"> a) Mombasa</label>
+                    <label class="option"><input type="radio" name="q17" value="b"> b) Kisumu</label>
+                    <label class="option"><input type="radio" name="q17" value="c"> c) Nairobi</label>
+                    <label class="option"><input type="radio" name="q17" value="d"> d) Eldoret</label>
+                </div>
+            </div>
+              <div class="question">
+                <p>18. The capital of Cuba is:</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q18" value="a"> a) Santiago de Cuba</label>
+                    <label class="option"><input type="radio" name="q18" value="b"> b) Havana</label>
+                    <label class="option"><input type="radio" name="q18" value="c"> c) Varadero</label>
+                    <label class="option"><input type="radio" name="q18" value="d"> d) Camagüey</label>
+                </div>
+            </div>
+              <div class="question">
+                <p>19. Which of these cities is the capital of the Czech Republic?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q19" value="a"> a) Brno</label>
+                    <label class="option"><input type="radio" name="q19" value="b"> b) Ostrava</label>
+                    <label class="option"><input type="radio" name="q19" value="c"> c) Prague</label>
+                    <label class="option"><input type="radio" name="q19" value="d"> d) Pilsen</label>
+                </div>
+            </div>
+              <div class="question">
+                <p>20. What is the capital of Ireland?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q20" value="a"> a) Cork</label>
+                    <label class="option"><input type="radio" name="q20" value="b"> b) Galway</label>
+                    <label class="option"><input type="radio" name="q20" value="c"> c) Limerick</label>
+                    <label class="option"><input type="radio" name="q20" value="d"> d) Dublin</label>
+                </div>
+            </div>
+
+
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        </form>
+
+        <div class="results" id="results"></div>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            const correctAnswers = {
+                q1: "c",
+                q2: "c",
+                q3: "d",
+                q4: "c",
+                q5: "c",
+                q6: "d",
+                q7: "a",
+                q8: "c",
+                q9: "d",
+                q10: "c",
+                q11: "b",
+                q12: "c",
+                q13: "c",
+                q14: "c",
+                q15: "d",
+                q16: "d",
+                q17: "c",
+                q18: "b",
+                q19: "c",
+                q20: "d",
+            };
+
+            let score = 0;
+            let resultsHTML = "<h2>Results:</h2><ul>";
+
+            for (let question in correctAnswers) {
+                const selectedOption = document.querySelector(`input[name="${question}:checked`);
+
+               const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                if (userAnswer) {
+                    if (userAnswer.value === correctAnswers[question]) {
+                        score++;
+                        resultsHTML += `<li class="correct">Question ${question.slice(1)}: Correct!</li>`;
+                    } else {
+                        resultsHTML += `<li class="incorrect">Question ${question.slice(1)}: Incorrect. Correct answer was ${correctAnswers[question].toUpperCase()}.</li>`;
+                    }
+                } else {
+                    resultsHTML += `<li class="incorrect">Question ${question.slice(1)}: Unanswered. Correct answer was ${correctAnswers[question].toUpperCase()}.</li>`;
+                }
+            }
+
+            resultsHTML += "</ul>";
+            document.getElementById("results").innerHTML = resultsHTML;
+
+            alert(`Your score: ${score} out of 20`);
+        }
+    </script>
+</body>
+</html>
